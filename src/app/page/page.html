@@ -1,0 +1,72 @@
+<swiper class="swiper-container" [config]="config" (touchEnd)="touchEnd($event)" #swiper>
+  <ng-template swiperSlide class="swiper-slide">
+    <ion-content [fullscreen]="true">
+      <ion-refresher slot="fixed" (ionRefresh)="updateImages($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      <div class="spinner" *ngIf="isLoading">
+        <ion-spinner name="lines" color="tertiary"></ion-spinner>
+      </div>
+      <div class="server-error" *ngIf="!serverStatus">
+        <ion-title class="header" style="font-size: 12pt" i18n="Server error@@serverError"
+          >Not able to connect to image server</ion-title
+        >
+      </div>
+      <ion-header *ngIf="prevFolders.length > 0">
+        <ion-title class="header">{{activeFolder.split(imageService.slash).pop()}}</ion-title>
+      </ion-header>
+      <ion-grid class="gallery">
+        <div
+          *ngFor="let folder of foldersByFolder[activeFolder]; let i = index"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <div class="folder" (contextmenu)="promptFolderOptionsModal(i)" (click)="showFolder(i)">
+            <img style="float: left; width: 150px" src="assets/div/folder.png" />
+            <p style="clear: left; text-align: center">
+              {{ foldersByFolder[activeFolder][i].split(imageService.slash).pop() }}
+            </p>
+          </div>
+        </div>
+        <div
+          *ngFor="let im of imagesByFolder[activeFolder]; let i = index"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <img
+            class="image"
+            [src]="im"
+            (click)="openImage(i)"
+            (contextmenu)="promptImageOptionsModal(i)"
+          />
+        </div>
+      </ion-grid>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="bottom-buttons">
+        <input
+          #fileInput
+          type="file"
+          multiple
+          (change)="onFileSelect()"
+          accept="image/"
+          hidden="true"
+        />
+        <ion-button
+          #lastopp
+          *ngIf="prevFolders.length > 0"
+          block
+          color="primary"
+          (click)="selectImageSource()"
+          class="tab-page-button"
+          i18n="Upload images@@uploadImages"
+          >Upload image(s)</ion-button
+        >
+        <ion-button
+          block
+          color="success"
+          (click)="createNewFolder()"
+          class="tab-page-button"
+          i18n="Create new folder@@createNewFolder"
+          >New folder</ion-button
+        >
+      </ion-fab>
+    </ion-content>
+  </ng-template>
+</swiper>

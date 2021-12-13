@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="downloading" datatype="html">
+        <source>Downloading</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Downloading file or folder</note>
+      </trans-unit>
+      <trans-unit id="cancel" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/newFolderModal.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Cancel</note>
+      </trans-unit>
+      <trans-unit id="ok" datatype="html">
+        <source>OK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/newFolderModal.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Ok</note>
+      </trans-unit>
+      <trans-unit id="folderSavedToGallery" datatype="html">
+        <source>Folder saved to Gallery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <note priority="1" from="description">Folder saved to gallery</note>
+      </trans-unit>
+      <trans-unit id="imageSavedToGallery" datatype="html">
+        <source>Image saved to Gallery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <note priority="1" from="description">Picture saved to gallery</note>
+      </trans-unit>
+      <trans-unit id="couldNotSaveImage" datatype="html">
+        <source>Could not save image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/downloadModal.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+        <note priority="1" from="description">Not able to save image</note>
+      </trans-unit>
+      <trans-unit id="specifyFolderName" datatype="html">
+        <source>Specify name for new folder</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/newFolderModal.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Specify name for new folder</note>
+      </trans-unit>
+      <trans-unit id="delete" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Delete</note>
+      </trans-unit>
+      <trans-unit id="download" datatype="html">
+        <source>Download</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Download</note>
+      </trans-unit>
+      <trans-unit id="deleteConfirmation" datatype="html">
+        <source>Are you sure you want to delete </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Delete confirmation</note>
+      </trans-unit>
+      <trans-unit id="thisFolder" datatype="html">
+        <source>this folder</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">This folder</note>
+      </trans-unit>
+      <trans-unit id="thisImage" datatype="html">
+        <source>this image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <note priority="1" from="description">This image</note>
+      </trans-unit>
+      <trans-unit id="no" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+        <note priority="1" from="description">No</note>
+      </trans-unit>
+      <trans-unit id="yes" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/optionsModal.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <note priority="1" from="description">Yes</note>
+      </trans-unit>
+      <trans-unit id="serverError" datatype="html">
+        <source>Not able to connect to image server</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/page.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Server error</note>
+      </trans-unit>
+      <trans-unit id="uploadImages" datatype="html">
+        <source>Upload image(s)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/page.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/page.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+        <note priority="1" from="description">Upload images</note>
+      </trans-unit>
+      <trans-unit id="createNewFolder" datatype="html">
+        <source>New folder</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/page.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Create new folder</note>
+      </trans-unit>
+      <trans-unit id="chooseFile" datatype="html">
+        <source>Choose file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/page.ts</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+        <note priority="1" from="description">Choose file</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

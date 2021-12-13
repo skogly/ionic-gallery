@@ -1,0 +1,58 @@
+default:
+  image: ionic-temp-ci:latest
+
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+
+build-job:
+  stage: build
+  cache:
+    paths:
+      - .npm
+      - cache/Cypress
+  script:
+    - rm -rf ./node_modules
+    - npm ci
+    - ionic capacitor build android --prod --release
+  artifacts:
+    paths:
+      - ./node_modules/
+
+unit-tests:
+  stage: test
+  script:
+    - npm run test
+  allow_failure: true
+
+e2e-tests:
+  image: cypress/base:14.15.4
+  stage: test
+  cache:
+    paths:
+      - .npm
+      - cache/Cypress
+  script:
+    - ls
+    - rm -rf ./node_modules
+    - npm install -g @ionic/cli
+    - npm ci --prefer-offline
+    - npm start &
+    - sleep 20
+    - npm run e2e
+  artifacts:
+    paths:
+      - ./cypress/screenshots/
+      - ./cypress/videos/
+  allow_failure: true
+
+format-check:
+  stage: test
+  script:
+    - npm run lint
+  allow_failure: true
+
+deploy-prod:
+  stage: deploy
+  script:
+    - echo "Create suitable deploy script"
